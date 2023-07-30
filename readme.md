@@ -100,7 +100,7 @@ The following the tutorial on how to install Flask Framework: https://flask.pall
 
 Run the python application using the command:
 
-```bash
+```shell
 python3 app.py
 ```
 
@@ -123,8 +123,9 @@ Most problably the port will be 5000.
 ### Add new phone <a name = "add_new_phone"></a>
 
 ### Endpoint
+```
 POST http://<localhost>:<port>/phone_store/
-
+```
 Inserts a new phone to the database if no error is encountered.
 
 ### Error cases:
@@ -136,7 +137,9 @@ Error code operations for adding new phone:
 ### Query phone informatione <a name = "query_phone_information"></a>
 
 ### Endpoint
+```
 GET http://<localhost>:<port>/phone_store/<id>
+```
 Gives back the phone with specific ID in JSON format.
 
 ### Error cases:
@@ -148,14 +151,18 @@ Error code operations for adding new phone:
 ### List phones <a name = "list_phones"></a>
 
 ### Endpoint
+```
 GET http://<localhost>:<port>/phone_store/
+```
 
 List all phones stored in the database in JSON format. Code 200 - OK is returned to represent sucessfull operation. 
 
 ### Delete phone <a name = "delete_phone"></a>
 
 ### Endpoint
+```
 DELETE http://<localhost>:<port>/phone_store/<id>
+```
 Delete from the database the phone with specific ID in JSON format.
 
 ### Error cases:
@@ -256,7 +263,7 @@ Skipped
 Skipped
 
 ### Test plans
-Download the [test plan](https://.../) and import it on JMeter in order to test the running application.
+Download the [test plan](https://github.com/CodeTyperPro/phone-task-testing/) and import it on JMeter in order to test the running application.
 
 Now please follow the steps:
 1. ...
@@ -264,4 +271,4 @@ Now please follow the steps:
 3. ...
 
 
-## Deployment <a name = "deployment"></a>
+## Deployment <a name = "deployment"></a># phone-task-testing

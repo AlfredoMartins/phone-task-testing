@@ -58,7 +58,7 @@ GET http://<localhost>:<port>/phone_store/
 [{"Id": 9, "Name": "X30", "Brand": "Nokia", "Release": 2022, "OS": "Android"}, {"Id": 10, "Name": "X20", "Brand": "Nokia", "Release": 2021, "OS": "Android"}]
 
 4 - Delete phone
-The user can delete phone from the database by its ID. If the operation was succesful the response is 204 without content.
+The user can delete phone from the database by its ID. If the operation was successful the response is 204 without content.
 
 DELETE http://<localhost>:<port>/phone_store/<id>
 
