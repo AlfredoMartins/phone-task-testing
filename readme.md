@@ -1,5 +1,5 @@
 # Mobile Flask Restful API
-===
+==
 # Documentation
 
 This is an implementation and testing of a REST-based application able to store and show information about [mobile phones](https://www.nokia.com/phones/en_au/smartphones) using [Flask](https://pythonbasics.org/what-is-flask-python/) and [JMeter](https://jmeter.apache.org/) technologies.
@@ -164,21 +164,21 @@ No more test cases are listed up to this release documentation date.
 We recommend to run the application and test software using:
 - Minimum RAM 4G
 - 10 GB available disk space
-- Ubuntu 20.04.6 LTS
-- Apache JMeter 5.6.2
-- Java 8+
-- Python3
-- Flask
+- [Ubuntu 20.04.6 LTS](https://releases.ubuntu.com/focal/)
+- [Apache JMeter 5.6.2](https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.2.zip)
+- [Java 8+](https://www.java.com/download/ie_manual.jsp)
+- [Python3](https://www.python.org/downloads/)
+- [Flask](https://flask.palletsprojects.com/en/2.3.x/installation/)
 
 ### Staffing and training needs
 In case of any questions, please contact Alfredo Martins.
 Many resources can be used to learn how to use all the tools mentioned; Some links were left to help on training.
 
 ### Responsibilites
-Alfredo Martins is in charge of everything related to this task.
+`Alfredo Martins` is in charge of everything related to this task.
 
 ### Schedule
-This work was done in no more than 7 days using a flexible time schedule.
+This work was done in no more than `7 days` using a flexible time schedule.
 
 ### Planning risks
 Skipped
