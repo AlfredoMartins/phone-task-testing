@@ -1,90 +1,12 @@
-# NokiaPhoneTask
-
-Your task is to implement and test a REST-based application which can store and present information about mobile phones.
-
-Preferably you should choose a python based REST framework for the API implementation (cherrypy, pecan, ...) and  use JMeter for the API testing scenarios. Please create a detailed description in a readme file how to deploy, 
-start and use your application and description about the test scenarios. 
-
-Your application can use the choosen REST framework's built-in web/application server, 
-it is not required to deploy it to an additional webserver. The main focus of this task is the
-testing part to validate the implemented features and reveal the defects of the application.
-
-We know the following facts about a mobile phone:
-- Name
-- Brand
-- Year of release
-- OS platform
-It is possible to have different phones with the same name, but phones with the same name and same brand should be treated as the same.
-
-Base url of the application:
-http://<localhost>:<port>/phone_store/
-
-Features:
-
-1 - Adding a new phone:
-The request input has to contain all facts about the phone in json format. If the operation was successful the response should be the 201 Created HTTP status code with the input (+ ID field) in the response body. 
-Error cases:
-	409 Conflict - Phone is already in the database
-	422 Unprocessable Entity - Some of the facts are missing or not in the proper format
-	400 Bad Request - otherwise
-
-Request example:
-POST http://<localhost>:<port>/phone_store/
-{"Name": "X30", "Brand": "Nokia", "Release": 2022, "OS": "Android"}
-
-Response example:
-{"Id": 9, "Name": "X30", "Brand": "Nokia", "Release": 2022, "OS": "Android"}
-
-Tips: Use in-memory database to store data, it is not neccessary to have a real database. The structure of the phone data is really simple, it is not neccessary to create your own datasturcture, use built-in objects. When you insert a phone to the database add an ID (sequential numbers) to the record.
-
-2 - Querying phone information:
-It is possible to query information about one phone by its database id. If the operation was succesful the response is 200 - OK status code and the body contains the phone info in the following format/example:
-
-GET http://<localhost>:<port>/phone_store/<id>
-{"Id": 9, "Name": "X30", "Brand": "Nokia", "Release": 2022, "OS": "Android"}
-
-Error cases:
-	404 Not Found - Id is not in the database
-	400 Bad Request - otherwise
-
-3 - Listing phones
-It is possible to list all of the stored phones. If the list operation was succesful the response is 200 - OK and the body contains the phone infos in the following format/example:
-
-GET http://<localhost>:<port>/phone_store/
-[{"Id": 9, "Name": "X30", "Brand": "Nokia", "Release": 2022, "OS": "Android"}, {"Id": 10, "Name": "X20", "Brand": "Nokia", "Release": 2021, "OS": "Android"}]
-
-4 - Delete phone
-The user can delete phone from the database by its ID. If the operation was succesful the response is 204 without content.
-
-DELETE http://<localhost>:<port>/phone_store/<id>
-
-Error cases:
-	404 Not Found - Id is not in the database
-	400 Bad Request - otherwise
-
-Testing:
-To test your application you have to use Apache JMeter. In the JMeter it is possible to create test plans to validate your application. Based on the specification you have to find out what should be tested to cover all of the features. Any additional test plans about the appliciation are welcome.
-The suggestion is to create smaller tests after a feature is ready. When the application development is finished you can create full lifecycle tests. 
-
-Outcome:
-- Create a zip file which contains the application code, the test plans and the documentation
-- The phone application can be started, running continuously and ready to serve incoming requests
-- Test plans can be imported and executed in JMeter to test the running application
-- Documentation: Detailed description how to build and use the application and short notes about the test plans
-
-
+# Mobile Flask Restful API
 ===
 # Documentation
 
 This is an implementation and testing of a REST-based application able to store and show information about [mobile phones](https://www.nokia.com/phones/en_au/smartphones) using [Flask](https://pythonbasics.org/what-is-flask-python/) and [JMeter](https://jmeter.apache.org/) technologies.
 
-In this particular task, only the following fields were considered:
-- Name
-- Brand
-- Year of Release
-- Operating System
+In this particular task, only the following fields were considered: object (name, brand, year of release, operating system).
 
-[Contents]
+## Contents
 - [Build and Use the application?](#build_and_use_the_application)
 - [Testing](#testing)
 - [Deployment](#deployment)
@@ -110,7 +32,9 @@ python3 app.py
 This is an API that allow to perform GET, POST, PUT and DELETE HTTP request methods to Mobile phones.
 
 ## Base URL of the application
-http://<localhost>:<port>/phone_store/
+```
+BASE URL http://<localhost>:<port>/phone_store/
+```
 
 Most problably the port will be 5000.
 
@@ -180,7 +104,7 @@ The goal of this plan is to test the application based It's specification either
 We are testing all the features the application can perform (complete CRUD).
 
 ### Software Risk Issues
-By adding more than 10^8 items in our database, the application tends to load all the mobile phones lowly due to the complexity and ammount of data which might lead to a bug.
+By adding more than 10^8 items in our database, the application tends to load all the mobile phones slowly due to the complexity and ammount of data which might lead to a bug.
 
 ### Features to be tested
 
@@ -263,12 +187,20 @@ Skipped
 Skipped
 
 ### Test plans
-Download the [test plan](https://github.com/CodeTyperPro/phone-task-testing/) and import it on JMeter in order to test the running application.
+Download the [test plan](https://github.com/CodeTyperPro/phone-task-testing/blob/main/testing/api_testing_view_res_tree.jmx) and import it on JMeter in order to test the running application.
+
+Before start, [configure](https://www.guru99.com/guide-to-install-jmeter.html) your JMeter.
 
 Now please follow the steps:
-1. ...
-2. ...
-3. ...
+1. Open JMeter:
+![Open JMeter](testing/../screenshots/open_jmeter.png)
 
+2. Click at File > Open or Ctrl + O:
+![Open JMeter](testing/../screenshots/importing.png)
+   
+Then find the `api_testing_view_res_tree.jmx` file and import it.
+
+3. Run the test cases. Click the `GREEN` button `highlighted`:
+![Run testcases](testing/../screenshots/run.png)
 
 ## Deployment <a name = "deployment"></a># phone-task-testing
