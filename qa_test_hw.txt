@@ -79,4 +79,5 @@ Outcome:
 - Create a zip file which contains the application code, the test plans and the documentation
 - The phone application can be started, running continuously and ready to serve incoming requests
 - Test plans can be imported and executed in JMeter to test the running application
-- Documentation: Detailed description how to build and use the application and short notes about the test plans
+- Documentation: 
+	Detailed description how to build and use the application and short notes about the test plans
