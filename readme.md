@@ -218,6 +218,7 @@ Then find the `api_testing_view_res_tree.jmx` file and import it.
 
 4. Change the URL and PORT according to your device. By default it is assumed to be `localhost:5000`.
 <br>
+
 ![Run test cases](testing/../screenshots/change.png)
 <br>
 ### Description
