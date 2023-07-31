@@ -52,11 +52,11 @@ Inserts a new phone to the database if no error is encountered.
 
 ### Error cases:
 Error code operations for adding new phone:
-- `409 Conflit`: Duplicate phone now allowed.
+- `409 Conflict`: Duplicate phone now allowed.
 - `422 Unprocessable Entity`: Parameters not passed correctly or malformated.
 - `400 Bad Request`: In case any other error occur.
 
-### Query phone informatione <a name = "query_phone_information"></a>
+### Query phone information <a name = "query_phone_information"></a>
 
 ### Endpoint
 ```
@@ -89,8 +89,8 @@ Delete from the database the phone with specific ID in `JSON format`.
 
 ### Error cases:
 Error code operations for delete operations:
-- 404 Not Found: ID not found in the database
-- 400 Bad Request: In case any other error occur.
+- `404 Not Found`: ID not found in the database
+- `400 Bad Request`: In case any other error occur.
 
 ## Testing <a name = "testing"></a>
 
@@ -121,7 +121,7 @@ By adding more than 10^8 items in our database, the application tends to load al
 On risk levels, H - High; M - Medium; L - Low
 
 ### Features not to be tested
-404 - Bad requests are not going to be tested.
+`404` - Bad requests are not going to be tested.
 
 ### Strategy
 For this task, [Apache JMeter](https://jmeter.apache.org/) is the testing software recommended to be used. Please check out [JMeter Getting Started](https://jmeter.apache.org/usermanual/get-started.html) to learn in case needed.
@@ -140,7 +140,7 @@ Tests:
 When running the test cases using the current version, `all test cases completed` are expected as output.
 
 ### Suspension criteria and resumption requirements
-It is only allowed an upper bound of 50% of defects. More than that, It is recommended to have a deep check on the solution provided before rerun the tests.
+It is only allowed an upper bound of 50% of defects. More than that, It is recommended to have a deep check on the solution provided before rerun the test cases.
 
 ### Test Deliverables
 As part of this plan, we deliver:
@@ -185,16 +185,23 @@ Before start, [configure](https://www.guru99.com/guide-to-install-jmeter.html) y
 
 Now please follow the steps:
 1. Open JMeter:
+<br>
+
 ![Open JMeter](testing/../screenshots/open_jmeter.png)
 <br>
 
-2. Click at `File > Open` or Ctrl + O:
+1. Click at `File > Open` or `Ctrl + O`:
+<br>
+
 ![Open JMeter](testing/../screenshots/importing.png)
 <br>
+
 Then find the `api_testing_view_res_tree.jmx` file and import it.
 <br>
 
-3. Run the test cases. Click the `GREEN` button `highlighted`:
+1. Run the test cases. Click the `GREEN` button `highlighted`:
+<br>
+
 ![Run test cases](testing/../screenshots/run.png)
 <br>
 
@@ -217,19 +224,19 @@ POST_Testing
 - Post2API
 
 - Post1AlreadyExistsAPI
-==
+===
 GET_Testing
 - GetAllAPI
 
 - GetSingleAPI
 
 - GetSingleNotFoundAPI
-==
+===
 DELETE_Testing
 - DeleteAPI
 
 - DeleteNotFoundAPI
-==
+===
 PUT_Testing
 - PutAPI
 
