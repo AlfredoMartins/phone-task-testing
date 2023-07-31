@@ -210,36 +210,38 @@ Then find the `api_testing_view_res_tree.jmx` file and import it.
 Order level: 
 ```
 - Fragment
-  - Test case
+    - Test case
 ```
 
 <br>
 
 PRE_PHASE_Testing
-- GetAllEmptyAPI
+- GetAllEmptyAPI: checks non-existence of item.
+
+---
 
 POST_Testing
-- Post1API
-  
-- Post2API
+- Post1API: adds the 1st entry to the database sucessfully.
+- Post2API: adds the 2nd entry to the database sucessfully.
+- Post1AlreadyExistsAPI: try to insert the 1st entry again and fails consequently.
+- PostMore20API: adds sucessfully 20 more entries loading from a `CVS` file.
 
-- Post1AlreadyExistsAPI
-===
+--- 
 GET_Testing
-- GetAllAPI
+- GetAllAPI: Query all mobile phone entries added.
+- GetSingleAPI: Checks existence of a specific mobile ID in the database. 
+- GetSingleNotFoundAPI: Checks non-existence of an ID.
 
-- GetSingleAPI
+---
 
-- GetSingleNotFoundAPI
-===
 DELETE_Testing
-- DeleteAPI
+- DeleteAPI: remove a mobile phone in the database in case it exists.
+- DeleteNotFoundAPI: tries to delete a mobile phone not presented in the database.
 
-- DeleteNotFoundAPI
-===
+---
+
 PUT_Testing
-- PutAPI
-
-- PutNotFoundAPI
+- PutAPI: asserts for a modification of a mobile data specifying the ID.
+- PutNotFoundAPI: tries to modify a mobile data not presented int he databse.
 
 ## Deployment <a name = "deployment"></a>
