@@ -7,22 +7,34 @@ In this particular task, only the following fields were considered: object (name
 
 ## Contents
 - [Build and Use the application?](#build_and_use_the_application)
+  - [Deployment](#deployment)
 - [Testing](#testing)
-- [Deployment](#deployment)
 
 # Build and Use the application? <a name = "build_and_use_the_application"></a>
 
-## Setup
+## Deployment? <a name = "deployment"></a>
 
-The following the tutorial on how to install Flask Framework: https://flask.palletsprojects.com/installation/
+### Pre-requisite
+- [Python3](https://www.python.org/downloads/)
+
+### Setup
+
+`Install dependencies`: install the required dependencies using `pip`. Run:
+```shell
+pip install -r requirements.txt
+```
+
+Alternatively, you can check it out the following tutorial on how to install Flask Framework: https://flask.palletsprojects.com/installation/ in case you face father issues.
 
 ## Run
 
-Run the python application using the command:
+After get done with dependencies installation, run the python application using the command:
 
 ```shell
 python3 app.py
 ```
+
+At this stage, we assume the application is running `successfully` on `localhost:5000` OR `127.0.0.1:5000`.
 
 # API
 
@@ -31,10 +43,9 @@ This is an API that allow to perform `GET`, `POST`, `PUT` and `DELETE` HTTP requ
 
 ## Base URL of the application
 ```
-BASE URL http://<localhost>:<port>/phone_store/
+BASE URL -> http://<localhost>:<port>/phone_store/
+SAMPLE BASE URL -> http://localhost:5000/phone_store/
 ```
-
-Most probably the port will be 5000.
 
 ## Features
 - [Add new phone](#add_new_phone)
@@ -102,7 +113,7 @@ The goal of this plan is to test the application based It's specification either
 We are testing all the features the application can perform (complete CRUD).
 
 ### Software Risk Issues
-By adding more than 10^8 items in our database, the application tends to load all the mobile phones slowly due to the complexity and ammount of data which might lead to a bug.
+By adding more than 10^8 entries in our database, the application tends to load all the mobile phones slowly due to the complexity and ammount of data which might lead to a bug.
 
 ### Features to be tested
 
@@ -118,7 +129,7 @@ By adding more than 10^8 items in our database, the application tends to load al
 | List again  					| L     |
 | Show the 1st mobile phone   	| L     |
 
-On risk levels, H - High; M - Medium; L - Low
+On risk levels, `H - High`; `M - Medium`; `L - Low`.
 
 ### Features not to be tested
 `404` - Bad requests are not going to be tested.
@@ -190,7 +201,7 @@ Now please follow the steps:
 ![Open JMeter](testing/../screenshots/open_jmeter.png)
 <br>
 
-1. Click at `File > Open` or `Ctrl + O`:
+2. Click at `File > Open` or `Ctrl + O`:
 <br>
 
 ![Open JMeter](testing/../screenshots/importing.png)
@@ -199,11 +210,13 @@ Now please follow the steps:
 Then find the `api_testing_view_res_tree.jmx` file and import it.
 <br>
 
-1. Run the test cases. Click the `GREEN` button `highlighted`:
+3. Run the test cases. Click the `GREEN` button `highlighted`:
 <br>
 
 ![Run test cases](testing/../screenshots/run.png)
 <br>
+
+4. Change the URL and PORT according to your device. By default it is assumed to be `localhost:5000`.
 
 ### Description
 
@@ -242,6 +255,6 @@ DELETE_Testing
 
 PUT_Testing
 - PutAPI: asserts for a modification of a mobile data specifying the ID.
-- PutNotFoundAPI: tries to modify a mobile data not presented int he databse.
+- PutNotFoundAPI: tries to modify a mobile data not presented int he database.
 
-## Deployment <a name = "deployment"></a>
+> Solved by: MARTINS Alfredo
