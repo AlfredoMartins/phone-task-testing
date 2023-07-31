@@ -12,7 +12,7 @@ In this particular task, only the following fields were considered: object (name
 
 # Build and Use the application? <a name = "build_and_use_the_application"></a>
 
-## Deployment? <a name = "deployment"></a>
+## Deployment <a name = "deployment"></a>
 
 ### Pre-requisite
 - [Python3](https://www.python.org/downloads/)
@@ -217,7 +217,9 @@ Then find the `api_testing_view_res_tree.jmx` file and import it.
 <br>
 
 4. Change the URL and PORT according to your device. By default it is assumed to be `localhost:5000`.
-
+<br>
+![Run test cases](testing/../screenshots/change.png)
+<br>
 ### Description
 
 Order level: 
@@ -229,32 +231,32 @@ Order level:
 <br>
 
 PRE_PHASE_Testing
-- GetAllEmptyAPI: checks non-existence of item.
+- `GetAllEmptyAPI`: checks non-existence of item.
 
 ---
 
 POST_Testing
-- Post1API: adds the 1st entry to the database sucessfully.
-- Post2API: adds the 2nd entry to the database sucessfully.
-- Post1AlreadyExistsAPI: try to insert the 1st entry again and fails consequently.
-- PostMore20API: adds sucessfully 20 more entries loading from a `CVS` file.
+- `Post1API`: adds the 1st entry to the database sucessfully.
+- `Post2API`: adds the 2nd entry to the database sucessfully.
+- `Post1AlreadyExistsAPI`: try to insert the 1st entry again and fails consequently.
+- `PostMore20API`: adds sucessfully 20 more entries loading from a `CVS` file.
 
 --- 
 GET_Testing
-- GetAllAPI: Query all mobile phone entries added.
-- GetSingleAPI: Checks existence of a specific mobile ID in the database. 
-- GetSingleNotFoundAPI: Checks non-existence of an ID.
+- `GetAllAPI`: Query all mobile phone entries added.
+- `GetSingleAPI`: Checks existence of a specific mobile ID in the database. 
+- `GetSingleNotFoundAPI`: Checks non-existence of an ID.
 
 ---
 
 DELETE_Testing
-- DeleteAPI: remove a mobile phone in the database in case it exists.
-- DeleteNotFoundAPI: tries to delete a mobile phone not presented in the database.
+- `DeleteAPI`: remove a mobile phone in the database in case it exists.
+- `DeleteNotFoundAPI`: tries to delete a mobile phone not presented in the database.
 
 ---
 
 PUT_Testing
-- PutAPI: asserts for a modification of a mobile data specifying the ID.
-- PutNotFoundAPI: tries to modify a mobile data not presented int he database.
+- `PutAPI`: asserts for a modification of a mobile data specifying the ID.
+- `PutNotFoundAPI`: tries to modify a mobile data not presented int he database.
 
 > Solved by: MARTINS Alfredo
