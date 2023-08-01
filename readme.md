@@ -110,7 +110,7 @@ The goal of this plan is to test the application based on its specification in b
 ### Plan
 
 ### Test Items
-We are testing all the features the application can perform (complete CRUD).
+We are testing all the features the application can perform (according to the specification provided).
 
 ### Software Risk Issues
 By adding more than 10^8 entries in our database, the application tends to load all the mobile phones slowly due to the complexity and ammount of data which might lead to a bug.
@@ -128,6 +128,8 @@ By adding more than 10^8 entries in our database, the application tends to load 
 | Delete all mobile phones   	| H     |
 | List again  					| L     |
 | Show the 1st mobile phone   	| L     |
+| Add 20 more entries	| M     |
+| List all mobile phones   		| L     |
 
 On risk levels, `H - High`; `M - Medium`; `L - Low`.
 
@@ -135,18 +137,13 @@ On risk levels, `H - High`; `M - Medium`; `L - Low`.
 `404` - Bad requests are not going to be tested.
 
 ### Strategy
-For this task, [Apache JMeter](https://jmeter.apache.org/) is the testing software recommended to be used. Please check out [JMeter Getting Started](https://jmeter.apache.org/usermanual/get-started.html) to learn in case needed.
-
-There will be about 4 regression tests. We use "Retest all" and "Regression test selection".
-
-At MASTER LEVEL is expected all functionality work perfect.
+For this task, [Apache JMeter](https://jmeter.apache.org/) is the testing software recommended to be used. Please check out [JMeter Getting Started](https://jmeter.apache.org/usermanual/get-started.html) to learn in case needed. There will be about 4 regression tests. We use `Retest all` and `Regression test selection`. At MASTER LEVEL is expected all functionality work perfectly. 
 
 Please, be noticed that first we try to test small test cases and then move bigger ones so that when they get finished we create the full lifecycle tests.
 
 ### Item pass/fail criteria
 #### Unit test level
-Similar test cases can be found on the file
-Tests:
+Skipped. Check it out [`link`](#test_plans).
 
 When running the test cases using the current version, `all test cases completed` are expected as output.
 
@@ -168,32 +165,32 @@ We recommend running the application and test software using:
 
 - Minimum 4G RAM
 - Minimum 10GB available disk space
-- [Ubuntu 20.04.6 LTS](https://releases.ubuntu.com/focal/)
+- [Windows 10](https://microsoft.com/en-us/software-download/windows10ISO) or [Ubuntu 20.04.6 LTS](https://releases.ubuntu.com/focal/)
 - [Apache JMeter 5.6.2](https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.2.zip)
 - [Java 8+](https://www.java.com/download/ie_manual.jsp)
 - [Python3](https://www.python.org/downloads/)
 - [Flask](https://flask.palletsprojects.com/en/2.3.x/installation/)
 
 ### Staffing and training needs
-In case of any questions, please contact `Alfredo Martins`.
+In case of any questions, please contact [`QA Tester`](#).
 Many resources can be used to learn how to use all the tools mentioned; Some links were left to help on training.
 
 ### Responsibilites
-`Alfredo Martins` is in charge of everything related to this task.
+`QA Tester` is in charge of everything related to this task.
 
 ### Schedule
 This work was completed in approximately `7 days` using a flexible time schedule.
 
 ### Planning risks
-Skipped
+Skipped.
 
 ### Approvals
-Skipped
+Skipped.
 
 ### Test plans
-Download the [test plan](https://github.com/CodeTyperPro/phone-task-testing/blob/main/testing/api_testing_view_res_tree.jmx) and import into JMeter in order to test the running application.
+Download the [`test plan`](https://github.com/CodeTyperPro/phone-task-testing/blob/main/testing/api_testing_view_res_tree.jmx) and import into JMeter in order to test the running application.
 
-Before start, [configure](https://www.guru99.com/guide-to-install-jmeter.html) your JMeter.
+Before start, [`configure`](https://www.guru99.com/guide-to-install-jmeter.html) your JMeter.
 
 Now please follow the steps:
 1. Open JMeter:
@@ -222,6 +219,7 @@ Then find the `api_testing_view_res_tree.jmx` file and import it.
 
 ![Run test cases](testing/../screenshots/change.png)
 <br>
+
 ### Description
 
 Outline level: 
@@ -260,5 +258,3 @@ DELETE_Testing
 PUT_Testing
 - `PutAPI`: asserts for a modification of a mobile data specifying the ID.
 - `PutNotFoundAPI`: tries to modify a mobile data not presented int he database.
-
-> Solved by: MARTINS Alfredo
