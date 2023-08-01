@@ -234,7 +234,6 @@ PRE_PHASE_Testing
 - `GetAllEmptyAPI`: checks non-existence of item.
 
 ---
-
 POST_Testing
 - `Post1API`: adds the 1st entry to the database sucessfully.
 - `Post2API`: adds the 2nd entry to the database sucessfully.
@@ -248,7 +247,6 @@ GET_Testing
 - `GetSingleNotFoundAPI`: Checks non-existence of an ID.
 
 ---
-
 DELETE_Testing
 - `DeleteAPI`: remove a mobile phone in the database in case it exists.
 - `DeleteNotFoundAPI`: tries to delete a mobile phone not presented in the database.
