@@ -143,7 +143,7 @@ Please, be noticed that first we try to test small test cases and then move bigg
 
 ### Item pass/fail criteria
 #### Unit test level
-Skipped. Check it out [`link`](#test_plans).
+Skipped. Check it out [`link`](#test-plans).
 
 When running the test cases using the current version, `all test cases completed` are expected as output.
 
