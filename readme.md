@@ -1,7 +1,7 @@
 # Mobile Flask Restful API
 # Documentation
 
-This is an implementation and testing of a REST-based application able to store and show information about [mobile phones](https://www.nokia.com/phones/en_au/smartphones) using [Flask](https://pythonbasics.org/what-is-flask-python/) and [JMeter](https://jmeter.apache.org/) technologies.
+This is an implementation and testing of a REST-based application capable of storing and displaying information about [mobile phones](https://www.nokia.com/phones/en_au/smartphones) using [Flask](https://pythonbasics.org/what-is-flask-python/) and [JMeter](https://jmeter.apache.org/) technologies.
 
 In this particular task, only the following fields were considered: object (name, brand, year of release, operating system).
 
@@ -24,7 +24,7 @@ In this particular task, only the following fields were considered: object (name
 pip install -r requirements.txt
 ```
 
-Alternatively, you can check it out the following tutorial on how to install Flask Framework: https://flask.palletsprojects.com/installation/ in case you face father issues.
+Alternatively, you can check it out the following tutorial on how to install Flask Framework: https://flask.palletsprojects.com/installation/ in case you face further issues.
 
 ## Run
 
@@ -39,7 +39,7 @@ At this stage, we assume the application is running `successfully` on `localhost
 # API
 
 ## Description
-This is an API that allow to perform `GET`, `POST`, `PUT` and `DELETE` HTTP request methods to Mobile phones.
+This is an API that allows to perform `GET`, `POST`, `PUT` and `DELETE` HTTP request methods to Mobile phones.
 
 ## Base URL of the application
 ```
@@ -63,8 +63,8 @@ Inserts a new phone to the database if no error is encountered.
 
 ### Error cases:
 Error code operations for adding new phone:
-- `409 Conflict`: Duplicate phone now allowed.
-- `422 Unprocessable Entity`: Parameters not passed correctly or malformated.
+- `409 Conflict`: Duplicate phone not allowed.
+- `422 Unprocessable Entity`: Parameters not passed correctly or malformatted.
 - `400 Bad Request`: In case any other error occur.
 
 ### Query phone information <a name = "query_phone_information"></a>
@@ -73,7 +73,7 @@ Error code operations for adding new phone:
 ```
 GET http://<localhost>:<port>/phone_store/<id>
 ```
-Gives back the phone with specific ID in `JSON` format.
+Gives back the phone with a specific ID in `JSON` format.
 
 ### Error cases:
 Error code operations for adding new phone:
@@ -88,7 +88,7 @@ Error code operations for adding new phone:
 GET http://<localhost>:<port>/phone_store/
 ```
 
-List all phones stored in the database in `JSON format`. Code `200 - OK` is returned to represent sucessfull operation. 
+List all phones stored in the database in `JSON format`. Code `200 - OK` is returned to represent successful operation. 
 
 ### Delete phone <a name = "delete_phone"></a>
 
@@ -105,7 +105,7 @@ Error code operations for delete operations:
 
 ## Testing <a name = "testing"></a>
 
-The goal of this plan is to test the application based It's specification either in MASTER and LEVEL SPECIFIC TEST plan using the `IEEE 829 Standard`.
+The goal of this plan is to test the application based on its specification in both the MASTER and LEVEL SPECIFIC TEST plan using the `IEEE 829 Standard`.
 
 ### Plan
 
@@ -141,7 +141,7 @@ There will be about 4 regression tests. We use "Retest all" and "Regression test
 
 At MASTER LEVEL is expected all functionality work perfect.
 
-Please, be noticed that first we try to test small test cases and then move bigger ones so that when get finished we create the full lifecycle tests.
+Please, be noticed that first we try to test small test cases and then move bigger ones so that when they get finished we create the full lifecycle tests.
 
 ### Item pass/fail criteria
 #### Unit test level
@@ -161,12 +161,13 @@ As part of this plan, we deliver:
 - Tools and their ouputs
 
 ### Remaining test tasks
-No more test cases are listed up to this release documentation date.
+No more test cases are listed in this release documentation.
 
 ### Environmental needs
-We recommend to run the application and test software using:
-- Minimum RAM 4G
-- 10 GB available disk space
+We recommend running the application and test software using:
+
+- Minimum 4G RAM
+- Minimum 10GB available disk space
 - [Ubuntu 20.04.6 LTS](https://releases.ubuntu.com/focal/)
 - [Apache JMeter 5.6.2](https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.2.zip)
 - [Java 8+](https://www.java.com/download/ie_manual.jsp)
@@ -181,7 +182,7 @@ Many resources can be used to learn how to use all the tools mentioned; Some lin
 `Alfredo Martins` is in charge of everything related to this task.
 
 ### Schedule
-This work was done in no more than `7 days` using a flexible time schedule.
+This work was completed in approximately `7 days` using a flexible time schedule.
 
 ### Planning risks
 Skipped
@@ -190,7 +191,7 @@ Skipped
 Skipped
 
 ### Test plans
-Download the [test plan](https://github.com/CodeTyperPro/phone-task-testing/blob/main/testing/api_testing_view_res_tree.jmx) and import it on JMeter in order to test the running application.
+Download the [test plan](https://github.com/CodeTyperPro/phone-task-testing/blob/main/testing/api_testing_view_res_tree.jmx) and import into JMeter in order to test the running application.
 
 Before start, [configure](https://www.guru99.com/guide-to-install-jmeter.html) your JMeter.
 
@@ -201,7 +202,7 @@ Now please follow the steps:
 ![Open JMeter](testing/../screenshots/open_jmeter.png)
 <br>
 
-2. Click at `File > Open` or `Ctrl + O`:
+2. Click on `File > Open` or press `Ctrl + O`:
 <br>
 
 ![Open JMeter](testing/../screenshots/importing.png)
@@ -216,14 +217,14 @@ Then find the `api_testing_view_res_tree.jmx` file and import it.
 ![Run test cases](testing/../screenshots/run.png)
 <br>
 
-4. Change the URL and PORT according to your device. By default it is assumed to be `localhost:5000`.
+4. Change the URL and PORT according to your device. By default, it is assumed to be `localhost:5000`.
 <br>
 
 ![Run test cases](testing/../screenshots/change.png)
 <br>
 ### Description
 
-Order level: 
+Outline level: 
 ```
 - Fragment
     - Test case
