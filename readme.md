@@ -248,7 +248,7 @@ GET_Testing
 
 ---
 DELETE_Testing
-- `DeleteAPI`: remove a mobile phone in the database in case it exists.
+- `DeleteAPI`: removes a mobile phone in the database in case it exists.
 - `DeleteNotFoundAPI`: tries to delete a mobile phone not presented in the database.
 
 ---
