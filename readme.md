@@ -172,11 +172,11 @@ We recommend running the application and test software using:
 - [Flask](https://flask.palletsprojects.com/en/2.3.x/installation/)
 
 ### Staffing and training needs
-In case of any questions, please contact [`QA Tester`](#).
+In case of any questions, please contact the [`QA Tester`](#).
 Many resources can be used to learn how to use all the tools mentioned; Some links were left to help on training.
 
 ### Responsibilites
-`QA Tester` is in charge of everything related to this task.
+The `QA Tester` is in charge of everything related to this task.
 
 ### Schedule
 This work was completed in approximately `7 days` using a flexible time schedule.
