@@ -1,4 +1,5 @@
 *.pyc
-/__pycache__
-/flask-nokia
+__pycache__
+flask-nokia
 qa_test_hw.txt
+*.txt
